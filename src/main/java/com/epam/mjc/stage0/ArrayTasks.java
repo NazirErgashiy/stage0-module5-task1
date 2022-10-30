@@ -12,6 +12,9 @@ public class ArrayTasks {
      */
     public String[] seasonsArray() {
 
+        String[] seasons = new String[]{"winter", "spring", "summer", "autumn"};
+
+        return seasons;
     }
 
     /**
@@ -26,6 +29,11 @@ public class ArrayTasks {
      */
     public int[] generateNumbers(int length) {
 
+        int[] arr = new int[length];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
+        }
+        return arr;
     }
 
     /**
@@ -38,6 +46,11 @@ public class ArrayTasks {
      */
     public int totalSum(int[] arr) {
 
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
     }
 
     /**
@@ -50,7 +63,12 @@ public class ArrayTasks {
      * arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == number) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -63,7 +81,11 @@ public class ArrayTasks {
      * arr = ["pineapple", "apple", "pen"] -> ["pen", "apple", "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
-
+        String[] nArr = new String[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            nArr[i] = arr[arr.length - 1 - i];
+        }
+        return nArr;
     }
 
     /**
@@ -79,6 +101,13 @@ public class ArrayTasks {
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
 
+        int[] posArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                arr[i] = posArr[i];
+            }
+        }
+        return posArr;
     }
 
     /**
@@ -93,5 +122,6 @@ public class ArrayTasks {
      */
     public int[][] sortRaggedArray(int[][] arr) {
 
+        return new int[0][0];
     }
 }
